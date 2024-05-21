@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-
-
     public function index()
     {
         return view('auth.search');
@@ -22,7 +20,6 @@ class UserController extends Controller
             return response()->json(['error' => 'No user found for this card information']);
         }
 
-        // You can customize the data you want to return here
         return response()->json([
             'name' => $user->name,
             'last_name' => $user->last_name,
